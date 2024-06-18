@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+}
+h1 {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+:root {
+    --primary-color: #021235;
+    --primary-light: #353f5b;
+    --orange-colot: #f35305;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #021235;
+    color: #eee;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto", sans-serif;
+}
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: 1px 1px 2px #353f5b;
+}
+
+.content {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1.6rem 1rem;
+} 
+
+.nav-bar .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+} 
+
+.nav-bar .site-logo {
+    padding: 0.5rem;
+ }
+    
+
+.nav-bar .site-logo .logo-link {
+    padding: 0.25rem;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 22px;
+    text-transform: capitalize;
+    color: #fff;
+    border-top:1px solid #f35305;
+}
+
+.nav-bar .navigation {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.nav-bar .navigation .link a {
+    padding: 0.25rem 0.5rem;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #fff;
+    border-top:1px solid transparent;
+    transition: all 0.6s;
+}
+
+.nav-bar .navigation .link:hover a {
+    color: #f35305;
+    border-top: 1px solid #f35305;
+}
+
+.home {
+   background: linear-gradient(to top,#021235, #021235bb), url(./assets/background/3.jpg); 
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   background-attachment: fixed;
+   min-height: 100vh;
+   width: 100%;
+}
+
+.home .content {
+    display: flex;
+    flex-direction: column;
+}
