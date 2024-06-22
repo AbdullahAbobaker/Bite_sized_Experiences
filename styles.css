@@ -20,7 +20,7 @@ h1 {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #021235;
+    background-color: #00040b;
     color: #eee;
 }
 
@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .home {
-   background: linear-gradient(to top,#021235, #021235bb), url(./assets/background/3.jpg); 
+   background: linear-gradient(to top,#00040b, #00040bbb), url(./assets/background/3.jpg); 
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
@@ -322,7 +322,7 @@ section .heading .subtitle {
     left: 0;
     bottom: 0;
     overflow: hidden;
-    background-image: linear-gradient(to top, var(--primary-color), transparent);
+    background-image: linear-gradient(to top, var(--primary-color) 5%, transparent);
 }
 .countries .items .card .image img{
     width: 100%;
