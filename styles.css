@@ -94,7 +94,6 @@ h1, h2, h3, h4, h5, h6 {
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
-   background-attachment: fixed;
    min-height: 100vh;
    width: 100%;
    display: flex;
@@ -156,3 +155,91 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #f35305;
     padding-left: 2rem;
 }
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+section .content {
+    width: 100%;
+    max-width: 1300px;
+}
+
+section .heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2rem; 
+}
+
+section .heading .title {
+    text-transform: uppercase;
+    font-size: 48px; 
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: #fff;
+}
+
+section .heading .subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    color: #021235; 
+}
+
+.about .items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.about .items .item, .about .items .image {
+   width: 100%;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+}
+
+.about .items .item, .about .items .image  {
+    position: relative;
+    display: inline-block; /* Ensure container wraps around image */
+    overflow: hidden; /* Hide overflow to prevent scaling issues */
+  }
+
+ .about .items .image img {
+    display: block;
+  width: 100%; /* Ensure the image fills its container */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Smooth transition for scaling effect */
+ }
+
+ .about .items .image:hover img{
+    transform: scale(1.1); /* Scale up image on hover */
+  }
+  
+ .about .item-content{
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+ }
+
+ .about .items .item .about-title {
+    font-size: 45px;
+    font-weight: 300;
+ }
+
+ .about .items .item .about-desc{
+    display: flex;
+   flex-direction: column;
+   gap: 1rem;
+ }
+
+ .about .items .item .about-desc p{
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+ }
+
