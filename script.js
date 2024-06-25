@@ -1,12 +1,18 @@
 const navbar = document.getElementById('navbar');
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}
 window.onscroll = function () {
-    scrollFunction()
+    scrollFunction();
 }
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        navbar.classList.add('active')
+        navbar.classList.add('active');
     } else {
-        navbar.classList.remove('active')
+        navbar.classList.remove('active');
     }
 }
 
@@ -16,50 +22,50 @@ const scrollrevealOption = {
     duration: 1500,
 }
 
-ScrollReveal().reveal('.home h1', scrollrevealOption)
+ScrollReveal().reveal('.home h1', scrollrevealOption);
 ScrollReveal().reveal('.home h4', {
     ...scrollrevealOption,
     delay: 800,
-})
+});
 ScrollReveal().reveal('.home .btn-explore', {
     ...scrollrevealOption,
     delay: 1200,
-})
+});
 
-ScrollReveal().reveal('.about .about-title', scrollrevealOption)
+ScrollReveal().reveal('.about .about-title', scrollrevealOption);
 ScrollReveal().reveal('.about .about-desc', {
     ...scrollrevealOption,
     delay: 600,
-})
+});
 ScrollReveal().reveal('.about .item-data', {
     ...scrollrevealOption,
     delay: 1200,
-})
+});
 ScrollReveal().reveal('.btn-explore', {
     ...scrollrevealOption,
     delay: 2000,
-})
+});
 ScrollReveal().reveal('.btn-more', {
     ...scrollrevealOption,
     delay: 2000,
-})
-ScrollReveal().reveal('.card', scrollrevealOption)
+});
+ScrollReveal().reveal('.card', scrollrevealOption);
 
 ScrollReveal().reveal('.card .image', {
     ...scrollrevealOption,
     delay: 600,
-})
+});
 ScrollReveal().reveal('.card .content-card h4', {
     ...scrollrevealOption,
     delay: 1600,
-})
+});
 ScrollReveal().reveal('.next .card .content-card p', {
     ...scrollrevealOption,
     delay: 2000,
-})
+});
 
-ScrollReveal().reveal('form .input', scrollrevealOption)
-ScrollReveal().reveal('row .card', scrollrevealOption)
+ScrollReveal().reveal('form .input', scrollrevealOption);
+ScrollReveal().reveal('row .card', scrollrevealOption);
 
 let items = document.querySelectorAll('.slider .list .item');
 let next = document.getElementById('next');
@@ -70,28 +76,10 @@ let thumbnails = document.querySelectorAll('.thumbnail .item');
 let countItem = items.length;
 let itemActive = 0;
 
-// event next click
-next.onclick = function () {
-    itemActive = itemActive + 1;
-    if (itemActive >= countItem) {
-        itemActive = 0;
-    }
-    showSlider();
-}
-
-// event prev click
-prev.onclick = function () {
-    itemActive = itemActive - 1;
-    if (itemActive < 0) {
-        itemActive = countItem - 1;
-    }
-    showSlider();
-}
-
 // auto run slider
 let refreshInterval = setInterval(() => {
     next.click();
-}, 5000)
+}, 7000)
 
 function showSlider() {
     // remove item active old
@@ -108,7 +96,7 @@ function showSlider() {
     clearInterval(refreshInterval);
     refreshInterval = setInterval(() => {
         next.click();
-    }, 5000)
+    }, 7000);
 }
 
 document.querySelectorAll('.btn-read').forEach(button => {
@@ -125,6 +113,10 @@ document.querySelectorAll('.btn-read').forEach(button => {
         selectedList.style.display = 'block';
 
         // Set the first thumbnail and item as active
+        items = selectedList.querySelectorAll('.item');
+        thumbnails = document.querySelectorAll('.thumbnail .item');
+        countItem = items.length;
+
         itemActive = 0;
         showSlider();
     });
@@ -135,5 +127,15 @@ thumbnails.forEach((thumbnail, index) => {
     thumbnail.addEventListener('click', () => {
         itemActive = index;
         showSlider();
-    })
-})
+    });
+});
+
+next.addEventListener('click', () => {
+    itemActive = (itemActive + 1) % countItem;
+    showSlider();
+});
+
+prev.addEventListener('click', () => {
+    itemActive = (itemActive - 1 + countItem) % countItem;
+    showSlider();
+});
