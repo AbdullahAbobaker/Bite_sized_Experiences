@@ -389,6 +389,29 @@ section .heading .subtitle {
     border: 1.6px solid #fff;
 
 }
+.btn-images {
+    position: relative;
+    font-size: 18px;
+    line-height: 16px;
+    font-weight: 300;
+    color: #eee;
+    padding: 1.4rem 2.4rem;
+    width: fit-content;
+    background-color: transparent;
+    border: 1.6px solid #eee;
+    cursor: pointer;
+    transition: all 1s ease-in;
+    margin-top: 1rem;
+    text-decoration: none; /* Remove underline from anchor */
+    display: inline-block; /* Ensure anchor behaves like a block element */
+}
+.btn-images:hover {
+    padding-left: 2rem;
+    color: #fff;
+    border: 1.6px solid #fff;
+    background-color: rgba(238, 238, 238, 0.2);
+
+}
 
 /* slider */
 
