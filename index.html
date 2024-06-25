@@ -29,19 +29,36 @@
         </ul>
       </div>
     </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visit The World</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
+  <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.js"></script>
+</head>
+<body>
+<nav class="nav-bar">
+  <div class="content">
+    <div class="site-logo">
+      <a href="#" class="logo-link">Visit The World</a>
+    </div>
+    <ul class="navigation">
+      <li class="link"><a href="#home">Home</a></li>
+      <li class="link"><a href="#about">About</a></li>
+      <li class="link"><a href="#next">Destinations</a></li>
+      <li class="link"><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
-    <header class="home" id="home">
-      <div class="content">
-        <h1>
-          Get a taste of the <strong>world's diversity</strong> and inspire your
-          next <strong>adventure</strong>
-        </h1>
-        <h4>Explore countries through bite-sized experiences</h4>
-        <button class="btn-explore">
-          Explore more <i class="ri-arrow-right-line"></i>
-        </button>
-      </div>
-    </header>
+<header class="home" id="home">
+  <div class="content">
+    <h1>Get a taste of the <strong>world's diversity</strong> and inspire your next <strong>adventure</strong></h1>
+    <h4>Explore countries through bite-sized experiences</h4>
+    <button class="btn-explore">Explore more <i class="ri-arrow-right-line"></i></button>
+  </div>
+</header>
 
     <section class="about" id="about">
       <div class="content">
@@ -102,7 +119,7 @@
                 Land of endless adventures and cultural treasures. Explore
                 iconic landmarks and hidden gems!
               </p>
-              <button class="btn-read">Try</button>
+              <button class="btn-read" data-country="USA">Explore</button>
             </div>
           </div>
 
@@ -116,7 +133,7 @@
                 Vibrant land of diverse cultures and stunning landscapes.
                 Explore its rich heritage and natural wonders!
               </p>
-              <button class="btn-read">Try</button>
+              <button class="btn-read" data-country="Brazil">Explore</button>
             </div>
           </div>
 
@@ -134,116 +151,238 @@
                 a country of historic wonders and rich culture. Explore its
                 iconic landmarks, exquisite cuisine, and artistic heritage!
               </p>
-              <button class="btn-read">Try</button>
+              <div>
+
+                <button class="btn-read" data-country="Italy">Explore</button>
+
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section>
-      <div class="slider">
-        <!-- list Items -->
-        <div class="list">
-          <div class="item active">
-            <img src="assets/USA/sunset-3875817_1280.jpg" />
-            <div class="content">
-              <p>DISCOVER</p>
-              <h2>USA</h2>
-              <p>
-                Explore the diverse landscapes and vibrant cities of the USA.
-                From coast to coast, discover cultural gems, natural wonders,
-                and rich history that define this incredible nation.
-              </p>
-            </div>
-          </div>
-          <div class="item">
-            <div class="content">
-              <h2>Culture</h2>
-              <p>
-                American culture is a blend of traditions, values, and
-                influences. From music and movies to cuisine and fashion, it
-                reflects a diverse and dynamic society shaped by a rich history
-                and multiculturalism.
-              </p>
-            </div>
-          </div>
-          <div class="item">
-            <img src="assets/USA/music.jpg" />
-            <div class="content">
-              <h2>Music</h2>
-              <p>
-                Experience the vibrant rhythm of USA music, a cultural mosaic of
-                genres and styles that captivates audiences worldwide. From
-                blues to rock 'n' roll, each melody echoes the spirit of
-                innovation and creativity.
-              </p>
-            </div>
-          </div>
-          <div class="item">
-            <img src="assets/USA/FOOD.jpg" />
-            <div class="content">
-              <h2>Food</h2>
-              <p>
-                Discover the savory delights of USA food, a culinary journey
-                blending flavors from coast to coast. From barbecue to seafood,
-                each dish tells a story of tradition and innovation.
-              </p>
-            </div>
-          </div>
-          <div class="item">
-            <img src="/assets/USA/mountains-139012_1280.jpg" />
-            <div class="content">
-              <h2>Landscapes</h2>
-              <p>
-                Marvel at the breathtaking landscapes of the USA, from majestic
-                mountains to vast deserts. Each region offers unique natural
-                wonders that inspire awe and adventure.
-              </p>
-            </div>
-          </div>
+<section>
+  <div class="slider">
+    <!-- USA Section -->
+    <div class="list" id="USA" style="display: none;">
+      <div class="item active">
+        <img src="assets/USA/sunset-3875817_1280.jpg" />
+        <div class="content">
+          <p>DISCOVER</p>
+          <h2>USA</h2>
+          <p>
+            Explore the diverse landscapes and vibrant cities of the USA.
+            From coast to coast, discover cultural gems, natural wonders,
+            and rich history that define this incredible nation.
+          </p>
         </div>
-        <!-- button arrows -->
-        <div class="arrows">
-          <button id="prev"><</button>
-          <button id="next">></button>
+      </div>
+      <div class="item">
+        <img src="assets/USA/cultural-festivals.jpg" />
+        <div class="content">
+          <p>Culture</p>
+          <h2>Culture</h2>
+          <p>
+            American culture is a blend of traditions, values, and
+            influences. From music and movies to cuisine and fashion, it
+            reflects a diverse and dynamic society shaped by a rich history
+            and multiculturalism.
+          </p>
         </div>
-        <!-- thumbnail -->
-        <div class="thumbnail">
+      </div>
+      <div class="item">
+        <img src="assets/USA/music.jpg" />
+        <div class="content">
+          <p>Music</p>
+          <h2>Music</h2>
+          <p>
+            Experience the rich tapestry of American music, from jazz and blues to rock and hip-hop. Discover the sounds that have influenced the world.
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="assets/USA/FOOD.jpg" />
+        <div class="content">
+          <p>Food</p>
+          <h2>Food</h2>
+          <p>
+            Savor the flavors of American cuisine, from regional specialties to international influences. Indulge in a culinary journey across the nation.
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="assets/USA/mountains-139012_1280.jpg" />
+        <div class="content">
+          <p>Landscapes</p>
+          <h2>Landscapes</h2>
+          <p>
+            Discover the breathtaking landscapes of the USA, from majestic mountains to serene beaches. Explore the natural beauty that defines this land.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Italy Section -->
+    <div class="list" id="Italy" style="display: none;">
+      <div class="item active">
+        <img src="assets/Italy/venice.jpg" />
+        <div class="content">
+          <p>DISCOVER</p>
+          <h2>Italy</h2>
+          <p>
+            Immerse yourself in the rich history, art, and culture of Italy.
+            Explore ancient ruins, Renaissance art, and the beauty of the Italian countryside.
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="assets/Italy/cultural-festivals.jpg" />
+        <div class="content">
+          <p>Culture</p>
+          <h2>Culture</h2>
+          <p>
+            Italian culture is renowned for its art, architecture, music, and culinary traditions.
+            Experience the vibrant festivals and traditions that define Italy.
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="assets/Italy/music.jpg" />
+        <div class="content">
+          <p>Music</p>
+          <h2>Music</h2>
+          <p>
+            Discover the rich musical heritage of Italy, from classical opera to contemporary pop.
+            Experience the sounds that have shaped Italian culture.
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="assets/Italy/food.jpg" />
+        <div class="content">
+          <p>Food</p>
+          <h2>Food</h2>
+          <p>
+            Indulge in the culinary delights of Italy, from pasta and pizza to fine wines and regional specialties.
+            Taste the flavors that have made Italian cuisine famous worldwide.
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="assets/Italy/landscapes.jpg" />
+        <div class="content">
+          <p>Landscapes</p>
+          <h2>Landscapes</h2>
+          <p>
+            Explore the stunning landscapes of Italy, from the rolling hills of Tuscany to the dramatic coastline of the Amalfi Coast.
+            Discover the natural beauty that inspires artists and travelers alike.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Brazil Section -->
+    <div class="list" id="Brazil" style="display: none;">
+      <div class="item active">
+        <img src="assets/Brazil/rio.jpg" />
+        <div class="content">
+          <p>DISCOVER</p>
+          <h2>Brazil</h2>
+          <p>
+            Experience the vibrant culture and natural wonders of Brazil.
+            From the Amazon rainforest to the bustling cities, discover the energy and beauty of this diverse country.
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="assets/Brazil/cultural-festivals.jpg" />
+        <div class="content">
+          <p>Culture</p>
+          <h2>Culture</h2>
+          <p>
+            Brazilian culture is a colorful blend of influences from indigenous, African, and European traditions.
+            Enjoy the lively festivals, music, and dance that make Brazil unique.
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="assets/Brazil/music.jpg" />
+        <div class="content">
+          <p>Music</p>
+          <h2>Music</h2>
+          <p>
+            Experience the rhythm of Brazil through its music, from samba and bossa nova to contemporary beats.
+            Discover the sounds that capture the spirit of Brazil.
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="assets/Brazil/food.jpg" />
+        <div class="content">
+          <p>Food</p>
+          <h2>Food</h2>
+          <p>
+            Savor the diverse flavors of Brazilian cuisine, from street food to gourmet dishes.
+            Enjoy a culinary journey through the tastes of Brazil.
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="assets/Brazil/landscapes.jpg" />
+        <div class="content">
+          <p>Landscapes</p>
+          <h2>Landscapes</h2>
+          <p>
+            Discover the breathtaking landscapes of Brazil, from the Amazon rainforest to the beautiful beaches.
+            Explore the natural wonders that make Brazil a paradise for nature lovers.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button arrows -->
+    <div class="arrows">
+      <button id="prev"><</button>
+      <button id="next">></button>
+    </div>
+
+      <!-- thumbnail -->
+      <div class="thumbnail">
           <div class="item active">
             <span class="icon">
               <i class="fa-brands fa-wpexplorer"></i>
             </span>
 
-            <div class="content"></div>
+              <div class="content"></div>
           </div>
           <div class="item">
             <span class="icon">
               <i class="fa-solid fa-gopuram"></i>
             </span>
-            <div class="content"></div>
+              <div class="content"></div>
           </div>
           <div class="item">
             <span class="icon">
               <i class="fa-solid fa-music"></i>
             </span>
-            <div class="content"></div>
+              <div class="content"></div>
           </div>
           <div class="item">
             <span class="icon">
               <i class="fa-solid fa-shrimp"></i>
             </span>
-            <div class="content"></div>
+              <div class="content"></div>
           </div>
           <div class="item">
             <span class="icon">
               <i class="fa-solid fa-mountain-sun"></i>
             </span>
-            <div class="content"></div>
+              <div class="content"></div>
           </div>
-        </div>
       </div>
-    </section>
+  </div>
+</section>
 
     <footer class="footer">
       <div class="content">
@@ -288,6 +427,7 @@
         </ul>
       </div>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
