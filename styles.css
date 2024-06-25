@@ -519,6 +519,10 @@ section .heading .subtitle {
     position: absolute;
     inset: auto 10px 10px 10px;
 }
+.thumbnail .icon{
+    font-size: 7rem;
+
+}
 @media screen and (max-width: 678px) {
     .thumbnail{
         justify-content: start;
@@ -530,6 +534,32 @@ section .heading .subtitle {
         top: 10%;
     }
 }
+.gallery {
+    display: grid;
+    grid-gap: 10px;
+  }
+  
+  .gallery img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .gallery {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .gallery img:nth-of-type(3) {
+      grid-column: 2 / 4;
+      grid-row: 1 / 3;
+    }
+  }
 
 
 footer {
