@@ -38,6 +38,11 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     background-color: transparent;
     box-shadow: 1px 1px 2px #353f5b;
+    z-index: 1000;
+}
+
+.nav-bar.hidden {
+    transform: translateY(-100%); /* Move the nav-bar above the viewport to hide it */
 }
 
 .content {
@@ -389,29 +394,7 @@ section .heading .subtitle {
     border: 1.6px solid #fff;
 
 }
-.btn-images {
-    position: relative;
-    font-size: 18px;
-    line-height: 16px;
-    font-weight: 300;
-    color: #eee;
-    padding: 1.4rem 2.4rem;
-    width: fit-content;
-    background-color: transparent;
-    border: 1.6px solid #eee;
-    cursor: pointer;
-    transition: all 1s ease-in;
-    margin-top: 1rem;
-    text-decoration: none; /* Remove underline from anchor */
-    display: inline-block; /* Ensure anchor behaves like a block element */
-}
-.btn-images:hover {
-    padding-left: 2rem;
-    color: #fff;
-    border: 1.6px solid #fff;
-    background-color: rgba(238, 238, 238, 0.2);
 
-}
 
 /* slider */
 
@@ -481,15 +464,46 @@ section .heading .subtitle {
     transform: translateY(30px);
     filter: blur(20px);
     opacity: 0;
-    animation: showContent 0.5s 0.7s ease-in-out forwards;
+    animation: showContent 1.5s 0.7s ease-in-out forwards;
 }
 
 .slider .list .item.active .content h2 {
-    animation: showContent 1.5s 1s ease-in-out forwards;
+    transform: translateY(30px);
+    filter: blur(3px);
+    opacity: 0;
+    animation: showContent 1s 0.5s ease-in-out forwards;
+
 }
 
-.slider .list .item.active .content p:nth-child(3) {
+.slider .list .item.active .content .btn-images {
+    transform: translateY(30px);
+    filter: blur(3px);
+    opacity: 0;
     animation: showContent 1.3s 1s ease-in-out forwards;
+}
+.btn-images {
+    position: relative;
+    font-size: 18px;
+    line-height: 16px;
+    font-weight: 300;
+    color: #eee;
+    padding: 1.4rem 2.4rem;
+    width: fit-content;
+    background-color: transparent;
+    border: 1.6px solid #eee;
+    cursor: pointer;
+    transition: transform 0.3s ease;;
+    margin-top: 1rem;
+    text-decoration: none; /* Remove underline from anchor */
+    display: inline-block; /* Ensure anchor behaves like a block element */
+    
+}
+.btn-images:hover {
+    padding-left: 2rem;
+    color: #fff;
+    border: 1.6px solid #fff;
+    background-color: rgba(238, 238, 238, 0.2);
+
 }
 .arrows{
     position: absolute;

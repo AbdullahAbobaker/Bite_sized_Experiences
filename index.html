@@ -16,6 +16,31 @@
     />
     <link rel="stylesheet" href="normalize.css" />
     <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var lastScrollTop = 0;
+        var delta = 5;
+        var navbarHeight = $(".nav-bar").outerHeight();
+
+        $(window).scroll(function (event) {
+          var st = $(this).scrollTop();
+
+          // Scroll down
+          if (st > lastScrollTop && st > navbarHeight) {
+            // Scroll down to hide the navbar
+            $(".nav-bar").addClass("hidden");
+          } else {
+            // Scroll up to show the navbar
+            if (st + $(window).height() < $(document).height()) {
+              $(".nav-bar").removeClass("hidden");
+            }
+          }
+
+          lastScrollTop = st;
+        });
+      });
+    </script>
   </head>
   <body>
     <nav class="nav-bar">
@@ -198,7 +223,6 @@
             <img src="assets/USA/mountains-139012_1280.jpg" />
             <div class="content">
               <h2>Landscapes</h2>
-
               <p>
                 Discover the breathtaking landscapes of the USA, from majestic
                 mountains to serene beaches. Explore the natural beauty that
@@ -210,9 +234,6 @@
               >
                 more images <i class="ri-arrow-right-line"></i>
               </a>
-              <button class="btn-explore">
-                Explore more <i class="ri-arrow-right-line"></i>
-              </button>
             </div>
           </div>
         </div>

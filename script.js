@@ -1,10 +1,12 @@
 const navbar = document.getElementById('navbar');
+
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     if (section) {
         section.scrollIntoView({ behavior: 'smooth' });
     }
 }
+
 window.onscroll = function () {
     scrollFunction();
 }
@@ -139,3 +141,4 @@ prev.addEventListener('click', () => {
     itemActive = (itemActive - 1 + countItem) % countItem;
     showSlider();
 });
+
