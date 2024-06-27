@@ -155,6 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("The saved counter value is not a number");
         document.querySelector("#completed-trips-counter").innerHTML = 0;
     }
+    localStorage.clear();
 });
 
     
