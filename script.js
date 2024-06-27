@@ -100,6 +100,18 @@ function showSlider() {
         next.click();
     }, 7000);
 }
+document.addEventListener('DOMContentLoaded', function() {
+    const navBar = document.querySelector('.nav-bar');
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) { // Adjust the value as needed
+            navBar.classList.add('scrolled');
+        } else {
+            navBar.classList.remove('scrolled');
+        }
+    });
+});
+
 
 document.querySelectorAll('.btn-read').forEach(button => {
     button.addEventListener('click', () => {

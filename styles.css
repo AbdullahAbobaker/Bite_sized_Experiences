@@ -43,6 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-bar.hidden {
     transform: translateY(-100%); /* Move the nav-bar above the viewport to hide it */
+    background: red;
 }
 
 .content {
@@ -95,6 +96,12 @@ h1, h2, h3, h4, h5, h6 {
     color: #f35305;
     border-top: 1px solid #f35305;
 }
+/* Add this to your existing CSS */
+.nav-bar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8); /* Example: semi-transparent black */
+    transition: background-color 0.7s ease;
+}
+
 
 .home {
    background: linear-gradient(to top,#00040b, #00040bbb), url(./assets/background/3.jpg); 
