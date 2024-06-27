@@ -27,6 +27,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+  
   } 
   
   .nav-bar .site-logo {
@@ -42,6 +43,7 @@
     text-transform: capitalize;
     color: #fff;
     border-top:1px solid #f35305;
+    text-decoration: none;
   }
   
   .nav-bar .navigation {
@@ -60,11 +62,13 @@
     color: #fff;
     border-top:1px solid transparent;
     transition: all 0.6s;
+    text-decoration: none;
   }
   
   .nav-bar .navigation .link:hover a {
     color: #f35305;
     border-top: 1px solid #f35305;
+    text-decoration: none;
   }
 
 .container {
