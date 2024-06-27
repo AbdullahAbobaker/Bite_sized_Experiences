@@ -110,11 +110,12 @@ document.addEventListener('DOMContentLoaded', function() {
             navBar.classList.remove('scrolled');
         }
     });
-});
+    document.querySelector('.slider').style.display = 'none';});
 
 
 document.querySelectorAll('.btn-read').forEach(button => {
     button.addEventListener('click', () => {
+        document.querySelector('.slider').style.display = 'block';
         const country = button.getAttribute('data-country');
 
         // Hide all country sections
