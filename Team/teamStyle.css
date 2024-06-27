@@ -70,7 +70,11 @@
 .container {
     padding-top: 90px;
     text-align: center;
-    background: #020a21;
+    background: #00040b;
+    background: -webkit-linear-gradient(top, #00040b, #082049);
+    background: -o-linear-gradient(top, #00040b, #082049);
+    background: -moz-linear-gradient(top, #00040b, #082049);
+    background: linear-gradient(top, #00040b, #082049);
     min-height: 100vh;
 }
 
