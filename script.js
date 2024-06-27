@@ -123,7 +123,41 @@ document.querySelectorAll('.btn-read').forEach(button => {
         showSlider();
     });
 });
+// Increment the completed trips counter
+document.querySelectorAll(".cards-counter").forEach((card) => {
+    card.addEventListener("click", () => {
+        if (card.classList.contains("incremented")) return;
 
+        const counter = document.querySelector("#completed-trips-counter");
+        let newValue = parseInt(counter.innerHTML);
+
+        if (!isNaN(newValue)) {
+            newValue += 1;
+            if (newValue > 3) newValue = 3;
+            counter.innerHTML = newValue;
+            card.classList.add("incremented");
+            localStorage.setItem("completed-trips-counter", newValue.toString());
+        } else {
+            console.error("The counter value is not a number");
+        }
+    });
+});
+
+// Retrieve the counter value from localStorage when the page loads
+document.addEventListener("DOMContentLoaded", () => {
+    const savedCounter = localStorage.getItem("completed-trips-counter");
+    let initialCounter = savedCounter ? parseInt(savedCounter) : 0;
+
+    if (!isNaN(initialCounter)) {
+        if (initialCounter > 3) initialCounter = 3;
+        document.querySelector("#completed-trips-counter").innerHTML = initialCounter;
+    } else {
+        console.error("The saved counter value is not a number");
+        document.querySelector("#completed-trips-counter").innerHTML = 0;
+    }
+});
+
+    
 // click thumbnail
 thumbnails.forEach((thumbnail, index) => {
     thumbnail.addEventListener('click', () => {
