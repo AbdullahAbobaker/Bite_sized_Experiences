@@ -43,7 +43,7 @@ body, html {
 
 /*---------------------------------------------*/
 .nav-bar {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -53,9 +53,7 @@ body, html {
   z-index: 1000;
 }
 
-.nav-bar.hidden {
-  transform: translateY(-100%); /* Move the nav-bar above the viewport to hide it */
-}
+
 
 .content {
   max-width: 1300px;
